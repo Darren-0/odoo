@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: odoo
-        registry1742646278357.azurecr.io/image-workflow-1742646797960
+        image: registry1742646278357.azurecr.io/image-workflow-1742646797960
         ports:
         - containerPort: 8069
         env:
