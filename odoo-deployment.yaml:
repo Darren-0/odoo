@@ -30,9 +30,22 @@ spec:
             secretKeyRef:
               name: postgres-secret
               key: postgres-password
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: postgres-db
         volumeMounts:
         - name: odoo-data
           mountPath: /var/lib/odoo
       volumes:
       - name: odoo-data
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: odoo-pvc # Name of your PersistentVolumeClaim
+      resources:
+        requests:
+          cpu: "500m"
+          memory: "1Gi"
+        limits:
+          cpu: "1"
+          memory: "2Gi"
