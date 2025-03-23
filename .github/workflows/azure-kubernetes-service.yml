@@ -35,11 +35,11 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "registry1742696919748"
-  CONTAINER_NAME: "your-container-name"
-  RESOURCE_GROUP: "odoo-test"
-  CLUSTER_NAME: "your-cluster-name"
-  DEPLOYMENT_MANIFEST_PATH: "odoo-deployment.yaml"
+  AZURE_CONTAINER_REGISTRY: registry1742696919748
+  CONTAINER_NAME: image-workflow-1742696782544
+  RESOURCE_GROUP: odoo-test
+  CLUSTER_NAME: odooKube
+  DEPLOYMENT_MANIFEST_PATH: odoo-deployment.yaml
 
 jobs:
   buildImage:
